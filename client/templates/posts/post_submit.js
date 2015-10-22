@@ -12,6 +12,10 @@ Template.postSubmit.events({
       if (error)
         return alert(error.reason);
 
+      // 用户非法越界操作
+      if (result.userInvalid)
+        return alert('User\'s illegal operation（用户非法越界操作）');
+
       // 显示结果，跳转页面
       if (result.postExists)
         alert('This link has already been posted（该链接已经存在）');
