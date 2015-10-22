@@ -14,7 +14,7 @@ Template.postEdit.events({
         // 向用户显示错误信息
         alert(error.reason);
       } else {
-        Router.go('postPage', {_id: currentPostId});
+        Router.go('postsList');
       }
     });
   },
