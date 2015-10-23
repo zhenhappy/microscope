@@ -35,7 +35,7 @@ Template.postSubmit.events({
 
       // 显示结果，跳转页面
       if (result.postExists)
-        throwError('This link has already been posted（该链接已经存在）');
+        return throwError('This link has already been posted（该链接已经存在）');
 
       Router.go('postsList');
     });
